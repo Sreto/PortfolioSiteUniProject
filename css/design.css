@@ -1,0 +1,320 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Grid Gallery  */
+
+.all_wrapper {
+    display: flex;
+}
+.grid_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: row;
+    width: 70%;
+    height: 120vh;
+    gap: 1rem;
+    padding: 10px;
+    background-color: #142850;
+}
+.image {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    border: 3px solid #00a8cc;
+    background-color: rgba(133, 133, 133, 0.5);
+    transition: all 0.3s ease-out;
+}
+
+.image:hover,
+.image:active {
+    background-color: #222222;
+    scale: 1.5;
+}
+
+.image-1 {
+    background-image: url("../image/Slika1.png");
+    background-repeat: no-repeat;
+    align-self: center;
+}
+
+.image-1:hover,
+.image-1:active {
+    transform: translate(15%, 15%);
+}
+
+.image-2 {
+    background-image: url("../image/Slika2.png");
+    background-repeat: no-repeat;
+    align-self: center;
+    background-color: #110e17;
+}
+.image-2:hover,
+.image-2:active {
+    transform: translateY(15%);
+    background-color: #110e17;
+}
+
+.image-3 {
+    background-image: url("../image/Slika3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-self: center;
+}
+.image-3:hover,
+.image-3:active {
+    transform: translate(-16%, 15%);
+}
+
+.image-4 {
+    background-image: url("../image/Slika4.png");
+    background-color: #222034;
+    background-repeat: no-repeat;
+    align-self: center;
+}
+
+.image-4:hover,
+.image-4:active {
+    transform: translateX(15%);
+    background-color: #222034;
+}
+
+.image-5 {
+    background-image: url("../image/Slika5.png");
+    background-repeat: no-repeat;
+    align-self: center;
+    background-color: #222222;
+}
+
+.image-6 {
+    background-image: url("../image/Slika6.png");
+    background-repeat: no-repeat;
+    align-self: center;
+    background-color: #222222;
+}
+
+.image-6:hover,
+.image-6:active {
+    transform: translateX(-16%);
+}
+
+.image-7 {
+    background-image: url("../image/Slika7.png");
+    background-repeat: no-repeat;
+    align-self: center;
+}
+
+.image-7:hover,
+.image-7:active {
+    transform: translateX(15%);
+}
+
+.image-8 {
+    background-image: url("../image/Slika8.png");
+    background-repeat: no-repeat;
+    align-self: center;
+}
+
+.image-9 {
+    background-image: url("../image/Slika9.png");
+    background-repeat: no-repeat;
+    align-self: center;
+    background-color: #000509;
+}
+.image-9:hover,
+.image-9:active {
+    transform: translateX(-16%);
+    background-color: #000509;
+}
+
+.image-10 {
+    background-image: url("../image/Slika10.jpg");
+    background-repeat: no-repeat;
+    align-self: center;
+    background-color: #ffffff;
+}
+
+.image-10:hover,
+.image-10:active {
+    transform: translate(15%, -15%);
+    background-color: #ffffff;
+}
+
+.image-11 {
+    background-image: url("../image/Slika11.jpg");
+    background-repeat: no-repeat;
+    align-self: center;
+    background-color: #ffffff;
+}
+
+.image-11:hover,
+.image-11:active {
+    transform: translateY(-15%);
+    background-color: #ffffff;
+}
+
+.image-12 {
+    background-image: url("../image/Slika12.jpg");
+    background-repeat: no-repeat;
+    align-self: center;
+    background-color: #ffffff;
+}
+
+.image-12:hover,
+.image-12:active {
+    transform: translate(-16%, -15%);
+    background-color: #ffffff;
+}
+
+.text_wrapper {
+    height: auto;
+    width: 30%;
+    background-color: #27496d;
+}
+
+/* mobile navigation */
+.mobile_navigation_wrapper {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.mobile_ul {
+    background-color: rgb(36, 101, 175);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.mobile_li {
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.mobile_li:hover,
+.mobile_li:active {
+    background: linear-gradient(rgba(67, 78, 175, 0.5), rgba(67, 78, 175, 0.5));
+    border-radius: 20px;
+}
+.mobile_li:hover .mobile_i {
+    transform: translateX(0);
+}
+
+.mobile_li:hover .mobile_span,
+.mobile_li:active .mobile_span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mobile_span {
+    display: inline-block;
+    transform: translateX(-20%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.mobile_a {
+    color: black;
+}
+.mobile_i {
+    transform: translateX(150%);
+    transition: all 0.5s ease-in-out;
+}
+
+/* media */
+@media (max-width: 700px) {
+    .nav_wrapper {
+        display: none;
+    }
+    .mobile_navigation_wrapper {
+        display: block;
+    }
+    .mobile_i,
+    .mobile_span {
+        margin: 0 0.25rem;
+        font-size: 1.25rem;
+    }
+}
+@media (max-width: 900px) {
+    .all_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid_wrapper {
+        width: 95vw;
+        height: 550vh;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+    }
+
+    .text_wrapper {
+        display: none;
+    }
+
+    .nav_wrapper {
+        display: none;
+    }
+
+    .mobile_navigation_wrapper {
+        display: block;
+    }
+}
+
+@media (max-width: 900px) {
+    .mobile_i,
+    .mobile_span {
+        margin: 0 0.25rem;
+        font-size: 0.8rem;
+    }
+
+    .image-2:active,
+    .image-2:hover,
+    .image-3:hover,
+    .image-3:active,
+    .image-4:active,
+    .image-4:hover,
+    .image-5:hover,
+    .image-5:active,
+    .image-6:active,
+    .image-6:hover,
+    .image-7:hover,
+    .image-7:active,
+    .image-8:active,
+    .image-8:hover,
+    .image-9:hover,
+    .image-9:active,
+    .image-10:active,
+    .image-10:hover,
+    .image-11:hover,
+    .image-11:active {
+        transform: translate(0, 0);
+    }
+
+    .image-1:hover,
+    .image-1:active {
+        transform: none;
+    }
+
+    .image-12:hover,
+    .image-12:active {
+        transform: translateY(-12%);
+    }
+
+    .image:hover,
+    .image:active {
+        scale: 1;
+    }
+
+    .image {
+        width: auto;
+    }
+}

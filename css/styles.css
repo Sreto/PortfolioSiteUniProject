@@ -10,24 +10,6 @@ a {
     width: 100vw;
 }
 
-.myPhoto {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(rgba(67, 78, 175, 0.15), rgba(67, 78, 175, 0.1)),
-        url("../image/me.jpg"), #020204;
-    opacity: 0.96;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50% 50% 0 0;
-    width: 20%;
-    height: 200px;
-    transition: all 0.7s ease-in-out;
-    box-shadow: 0 0 5rem rgb(67, 78, 175);
-}
-
 .left-side {
     flex: 1;
     transition: all 0.7s ease-in-out;
@@ -44,9 +26,6 @@ a {
 
 .right-side:hover {
     flex-grow: 1.5;
-}
-
-body {
 }
 
 /* header */
@@ -71,7 +50,7 @@ body {
 
 .design_content {
     position: absolute;
-    background: rgba(68, 59, 239, 0.2);
+    background: rgba(52, 52, 53, 0.4);
     right: 2rem;
     top: 50%;
     transform: translateY(-50%);
@@ -108,19 +87,21 @@ body {
 }
 
 .text_code_edit {
-    background: -webkit-linear-gradient(rgb(43, 18, 18), rgb(30, 59, 190));
+    background-color: #dd255f;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
-    box-shadow: 0.125rem 0.125rem 1.5rem white;
+    box-shadow: 0.2rem 0.1rem 0.7rem rgb(70, 66, 136);
 }
 
 .text_design_edit {
-    background: -webkit-linear-gradient(rgb(199, 39, 39), rgb(161, 24, 31));
+    background-color: #16daec;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
-    box-shadow: 0.2rem 0.2rem 1.5rem black;
+    box-shadow: 0.2rem 0.1rem 0.7rem white;
 }
 /* media */
 
@@ -147,16 +128,5 @@ body {
         left: 50%;
         top: 50%;
         transform: translateX(-50%);
-    }
-}
-@media (min-width: 25rem) {
-    .myPhoto {
-        width: 15rem;
-        height: 15rem;
-    }
-}
-@media (max-width: 800px) {
-    .myPhoto {
-        display: none;
     }
 }
