@@ -1,11 +1,14 @@
-*,
+body {
+    margin: 0;
+    padding: 0;
+}
 *::after,
 *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-a {
+.main_a {
     display: block;
     width: 100vw;
 }
@@ -103,7 +106,433 @@ a {
     text-transform: uppercase;
     box-shadow: 0.2rem 0.1rem 0.7rem white;
 }
-/* media */
+
+/*design page*/
+
+.all_wrapper {
+    display: flex;
+    background-color: #142850;
+    z-index: -100;
+}
+.grid_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: row;
+    width: 70%;
+    height: 120vh;
+    gap: 1rem;
+    padding: 10px;
+    background-color: #2f4166;
+    z-index: 2;
+    justify-items: center;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    border: 5px solid #7abaf1;
+    border-radius: 15px;
+    background-color: rgba(133, 133, 133, 0.5);
+    transition: all 0.3s ease-out;
+}
+
+.image:hover,
+.image:active {
+    background-color: #222222;
+    scale: 1.5;
+}
+
+.image-1 {
+    background-image: url("../image/Slika1.png");
+    background-repeat: no-repeat;
+    align-self: center;
+}
+
+.image-1:hover,
+.image-1:active {
+    transform: translate(15%, 15%);
+}
+
+.image-2 {
+    background-image: url("../image/Slika2.png");
+    background-repeat: no-repeat;
+    align-self: center;
+    background-color: #110e17;
+}
+.image-2:hover,
+.image-2:active {
+    transform: translateY(15%);
+    background-color: #110e17;
+}
+
+.image-3 {
+    background-image: url("../image/Slika3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-self: center;
+}
+.image-3:hover,
+.image-3:active {
+    transform: translate(-16%, 15%);
+}
+
+.image-4 {
+    background-image: url("../image/Slika4.png");
+    background-color: #222034;
+    background-repeat: no-repeat;
+    align-self: center;
+}
+
+.image-4:hover,
+.image-4:active {
+    transform: translateX(15%);
+    background-color: #222034;
+}
+
+.image-5 {
+    background-image: url("../image/Slika5.png");
+    background-repeat: no-repeat;
+    align-self: center;
+    background-color: #222222;
+}
+
+.image-6 {
+    background-image: url("../image/Slika6.png");
+    background-repeat: no-repeat;
+    align-self: center;
+    background-color: #222222;
+}
+
+.image-6:hover,
+.image-6:active {
+    transform: translateX(-16%);
+}
+
+.image-7 {
+    background-image: url("../image/Slika7.png");
+    background-repeat: no-repeat;
+    align-self: center;
+}
+
+.image-7:hover,
+.image-7:active {
+    transform: translateX(15%);
+}
+
+.image-8 {
+    background-image: url("../image/Slika8.png");
+    background-repeat: no-repeat;
+    align-self: center;
+}
+
+.image-9 {
+    background-image: url("../image/Slika9.png");
+    background-repeat: no-repeat;
+    align-self: center;
+    background-color: #000509;
+}
+.image-9:hover,
+.image-9:active {
+    transform: translateX(-16%);
+    background-color: #000509;
+}
+
+.image-10 {
+    background-image: url("../image/Slika10.jpg");
+    background-repeat: no-repeat;
+    align-self: center;
+    background-color: #ffffff;
+}
+
+.image-10:hover,
+.image-10:active {
+    transform: translate(15%, -15%);
+    background-color: #ffffff;
+}
+
+.image-11 {
+    background-image: url("../image/Slika11.jpg");
+    background-repeat: no-repeat;
+    align-self: center;
+    background-color: #ffffff;
+}
+
+.image-11:hover,
+.image-11:active {
+    transform: translateY(-15%);
+    background-color: #ffffff;
+}
+
+.image-12 {
+    background-image: url("../image/Slika12.jpg");
+    background-repeat: no-repeat;
+    align-self: center;
+    background-color: #ffffff;
+}
+
+.image-12:hover,
+.image-12:active {
+    transform: translate(-16%, -15%);
+    background-color: #ffffff;
+}
+
+.text_wrapper {
+    display: flex;
+    height: 70%;
+    width: 25%;
+    background-color: #c7ecf5;
+    justify-content: center;
+    position: fixed;
+    right: 2%;
+    z-index: 1;
+    border: 5px solid #ff8000;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+}
+
+.text_wrapper_content {
+    width: 80%;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/* code page */
+.work_in_progress {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #848eac;
+}
+
+.under_construction {
+    width: 450px;
+    height: 350px;
+}
+
+/*desktop navigation*/
+.nav_wrapper {
+    position: fixed;
+    width: min-content;
+    bottom: 0;
+    right: 0;
+    z-index: 2000;
+}
+.stativaV01 {
+    background: linear-gradient(to left, #bec5c3, rgb(29, 28, 28), #bec5c3);
+    width: 10px;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    border-radius: 7px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.nav_link {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 0;
+    cursor: pointer;
+    width: 100%;
+    background-color: #ff8000;
+    border-radius: 10px;
+    letter-spacing: 5px;
+    color: rgb(102, 51, 3);
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+}
+
+.nav_link:hover {
+    height: 100%;
+    border: 3px solid #c56402;
+}
+
+.nav {
+    height: 350px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_item {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    margin-top: 4%;
+    transition-duration: 0.2s;
+}
+
+.nav_item:nth-child(odd) {
+    transform: perspective(300px) rotateY(45deg);
+    box-shadow: -1px 1px 3px #bd4805;
+}
+
+.nav_item:nth-child(even) {
+    transform: perspective(300px) rotateY(-45deg);
+    box-shadow: 1px 1px 3px #bd4805;
+}
+
+.nav_item:hover {
+    transform: rotateY(0);
+    box-shadow: 0px 0px 0px;
+}
+
+/*mobile navigation*/
+.mobile_navigation_wrapper {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.mobile_ul {
+    background-color: rgb(36, 101, 175);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.mobile_li {
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.mobile_li:hover,
+.mobile_li:active {
+    background: linear-gradient(rgba(67, 78, 175, 0.5), rgba(67, 78, 175, 0.5));
+    border-radius: 20px;
+}
+.mobile_li:hover .mobile_i {
+    transform: translateX(0);
+}
+
+.mobile_li:hover .mobile_span,
+.mobile_li:active .mobile_span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mobile_span {
+    display: inline-block;
+    transform: translateX(-20%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.mobile_a {
+    color: black;
+}
+.mobile_i {
+    transform: translateX(150%);
+    transition: all 0.5s ease-in-out;
+}
+
+/* design and code media */
+
+@media (max-width: 1300px) {
+    .text_wrapper {
+        right: 0.8%;
+    }
+}
+
+@media (max-width: 900px) {
+    .mobile_navigation_wrapper {
+        display: block;
+        z-index: 500;
+    }
+    .all_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid_wrapper {
+        width: 95vw;
+        height: 550vh;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        margin-bottom: 3.75rem;
+        justify-items: normal;
+    }
+
+    .text_wrapper {
+        display: none;
+    }
+
+    .nav_wrapper {
+        display: none;
+    }
+    .mobile_i,
+    .mobile_span {
+        margin: 0 0.25rem;
+        font-size: 0.8rem;
+    }
+    .image-2:active,
+    .image-2:hover,
+    .image-3:hover,
+    .image-3:active,
+    .image-4:active,
+    .image-4:hover,
+    .image-5:hover,
+    .image-5:active,
+    .image-6:active,
+    .image-6:hover,
+    .image-7:hover,
+    .image-7:active,
+    .image-8:active,
+    .image-8:hover,
+    .image-9:hover,
+    .image-9:active,
+    .image-10:active,
+    .image-10:hover,
+    .image-11:hover,
+    .image-11:active {
+        transform: translate(0, 0);
+    }
+
+    .image-1:hover,
+    .image-1:active {
+        transform: none;
+    }
+
+    .image-12:hover,
+    .image-12:active {
+        transform: none;
+    }
+
+    .image:hover,
+    .image:active {
+        scale: 1;
+    }
+
+    .image {
+        width: auto;
+    }
+}
+
+/* main page media */
 
 @media (max-width: 50rem) {
     .header_container {
