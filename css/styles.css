@@ -1,6 +1,11 @@
+/* fonts:
+font-family: "Lateef", cursive;
+font-family: 'Cormorant', serif; */
+
 body {
     margin: 0;
     padding: 0;
+    background-color: royalblue;
 }
 *::after,
 *::before {
@@ -96,6 +101,7 @@ body {
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
     box-shadow: 0.2rem 0.1rem 0.7rem rgb(70, 66, 136);
+    margin: 0;
 }
 
 .text_design_edit {
@@ -105,6 +111,7 @@ body {
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
     box-shadow: 0.2rem 0.1rem 0.7rem white;
+    margin: 0;
 }
 
 /*design page*/
@@ -134,7 +141,7 @@ body {
     background-position: center;
     background-size: contain;
     border: 5px solid #7abaf1;
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: rgba(133, 133, 133, 0.5);
     transition: all 0.3s ease-out;
 }
@@ -314,6 +321,67 @@ body {
 .under_construction {
     width: 450px;
     height: 350px;
+}
+
+/*about page*/
+.section_wrapper {
+    background-color: #142850;
+}
+.about_wrapper {
+    display: flex;
+    background-color: #27496d;
+    height: 100vh;
+    width: 70vw;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+}
+.photo_intro_wrapper {
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+.about_photo {
+    background-image: url("../image/me.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 250px;
+    height: 15.6rem;
+    width: 15.6rem;
+    margin: 1rem auto;
+}
+
+.fade_in {
+    animation: fadeIn ease-in-out 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.about_info {
+    width: 80%;
+    height: 50%;
+    text-align: center;
+    font-family: "Lateef", cursive;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+}
+
+.intro-text {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.about_skill_info {
+    width: 80%;
+    height: 50%;
 }
 
 /*desktop navigation*/
