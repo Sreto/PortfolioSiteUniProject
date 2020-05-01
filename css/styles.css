@@ -728,7 +728,7 @@ hr.hr_edit {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -756,12 +756,12 @@ hr.hr_edit {
   background-repeat: no-repeat;
   border-radius: 10px;
   border: 2px solid #074607;
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
 }
 
 #contact_form {
   padding: 25px;
-  margin: 50px auto;
+  margin: 3rem auto;
 }
 
 fieldset {
@@ -1061,12 +1061,17 @@ fieldset {
   }
 }
 
-/* About media */
+/* Contact media */
 
-@media (max-width: 470px) {
+@media (max-width: 460px) {
   .contact_container {
     width: 90%;
-    font-size: 1rem;
+    font-size: 0.5rem;
+    margin-bottom: 10rem;
+  }
+  .social-button {
+  }
+  .social-buttons {
   }
 }
 
