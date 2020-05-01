@@ -330,7 +330,7 @@ body {
 }
 .about_wrapper {
   display: flex;
-  background-color: #e4e4e4;
+  background-color: hsl(0, 0%, 89%);
   height: auto;
   width: 70vw;
   margin: auto;
@@ -541,6 +541,8 @@ body {
   font-family: "Cormorant", serif;
   font-size: 1.25rem;
   margin: 3rem auto;
+  color: #13557a;
+  font-weight: 600;
 }
 .about_photo2 {
   margin: 2rem auto;
@@ -555,6 +557,8 @@ body {
   width: 80%;
   height: auto;
   flex-direction: column;
+  color: #13557a;
+  font-weight: 600;
 }
 
 .photos {
@@ -611,6 +615,235 @@ hr.hr_edit {
   text-align: justify;
 }
 
+/* Contact Me Page */
+
+/* social networks */
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5rem auto;
+}
+.social-buttons__button {
+  margin: 10px 5px 0;
+}
+
+.social-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: 70px;
+  height: 70px;
+  text-decoration: none;
+}
+.social-button__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border-radius: 100%;
+  background: #fff;
+  text-align: center;
+}
+.social-button i,
+.social-button svg {
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+.social-button i {
+  font-size: 28px;
+}
+.social-button svg {
+  height: 40%;
+  width: 40%;
+}
+.social-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+.social-button:focus,
+.social-button:hover {
+  color: #fff;
+}
+.social-button:focus::after,
+.social-button:hover::after {
+  width: 100%;
+  height: 100%;
+  margin-left: -50%;
+}
+
+.social-button--facebook {
+  color: #3b5999;
+}
+.social-button--facebook::after {
+  background: #3b5999;
+}
+.social-button--linkedin {
+  color: #0077b5;
+}
+.social-button--linkedin::after {
+  background: #0077b5;
+}
+.social-button--github {
+  color: #6e5494;
+}
+.social-button--github::after {
+  background: #6e5494;
+}
+.social-button--codepen {
+  color: #212121;
+}
+.social-button--codepen::after {
+  background: #212121;
+}
+.social-button--steam {
+  color: #7da10e;
+}
+.social-button--steam::after {
+  background: #7da10e;
+}
+
+.social-button--instagram {
+  color: #e4405f;
+}
+.social-button--instagram::after {
+  background: #e4405f;
+}
+
+/*Contact form */
+.contact_page_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(
+      to bottom,
+      rgb(187, 187, 102, 0.3),
+      rgba(18, 68, 37, 0.2)
+    ),
+    url("../image/jay-mantri-unsplash.jpg");
+}
+
+.contact_container {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(
+      to bottom,
+      rgba(43, 43, 42, 0.4),
+      rgba(161, 161, 161, 0)
+    ),
+    url("../image/warren-wong-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  border: 2px solid #074607;
+  margin-bottom: 3rem;
+}
+
+#contact_form {
+  padding: 25px;
+  margin: 50px auto;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact_form h3 {
+  font-family: "Lateef", cursive;
+  text-align: center;
+  color: #466b52;
+  display: block;
+  text-transform: uppercase;
+  font-size: 3rem;
+  background-color: rgba(227, 228, 228, 0.6);
+  border-radius: 50px;
+  margin-top: 0;
+}
+
+#contact_form input[type="text"],
+#contact_form input[type="email"],
+#contact_form textarea {
+  height: 2.2rem;
+  width: 100%;
+  border: 1px solid rgb(24, 154, 230);
+  background: rgba(132, 185, 255, 0.6);
+  margin: 0 0 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#contact_form input[type="text"]:hover,
+#contact_form input[type="email"]:hover,
+#contact_form textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid rgb(170, 170, 170);
+}
+
+#contact_form textarea {
+  height: 200px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact_form button[type="submit"] {
+  cursor: pointer;
+  width: 50%;
+  border: none;
+  background: #0cf;
+  color: #ffffff;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-radius: 5px;
+  position: absolute;
+  left: 25%;
+}
+
+#contact_form button[type="submit"]:hover {
+  background: #0099cc;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact_form button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact_form input:focus,
+#contact_form textarea:focus {
+  outline: 0;
+  border: 1px solid #999;
+}
+
 /*desktop navigation*/
 .nav_wrapper {
   position: fixed;
@@ -619,6 +852,7 @@ hr.hr_edit {
   right: 0;
   z-index: 2000;
 }
+
 .stativaV01 {
   background: linear-gradient(to left, #bec5c3, rgb(29, 28, 28), #bec5c3);
   width: 10px;
@@ -824,6 +1058,15 @@ hr.hr_edit {
 
   .image {
     width: auto;
+  }
+}
+
+/* About media */
+
+@media (max-width: 470px) {
+  .contact_container {
+    width: 90%;
+    font-size: 1rem;
   }
 }
 
