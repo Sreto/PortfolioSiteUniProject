@@ -728,7 +728,7 @@ hr.hr_edit {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 120vh;
+  height: 110vh;
   width: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -1062,19 +1062,31 @@ fieldset {
 }
 
 /* Contact media */
-
-@media (max-width: 460px) {
+@media (max-width: 420px) {
   .contact_container {
     width: 90%;
-    font-size: 0.5rem;
-    margin-bottom: 10rem;
+    margin-bottom: 1rem;
+  }
+  .contact_page_wrap {
+    height: 110vh;
   }
   .social-button {
+    width: 50px;
+    height: 50px;
   }
   .social-buttons {
+    margin-top: 0;
+  }
+  #contact_form h3 {
+    font-size: 1.5rem;
   }
 }
-
+@media (max-width: 900px) {
+  .contact_container {
+    width: 95%;
+    margin-bottom: 5rem;
+  }
+}
 /* main page media */
 
 @media (max-width: 50rem) {
