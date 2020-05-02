@@ -118,7 +118,7 @@ body {
 
 .all_wrapper {
   display: flex;
-  background-color: #142850;
+  background-color: #2f4166;
   z-index: -100;
 }
 .grid_wrapper {
@@ -127,10 +127,10 @@ body {
   grid-template-rows: repeat(4, 1fr);
   grid-auto-flow: row;
   width: 70%;
-  height: 120vh;
-  gap: 1rem;
+  /* height: 120vh; */
+  height: 100vmax;
+  gap: 0.6rem;
   padding: 10px;
-  background-color: #2f4166;
   z-index: 2;
   justify-items: center;
 }
@@ -140,8 +140,8 @@ body {
   width: 100%;
   background-position: center;
   background-size: contain;
-  border: 3px solid #7abaf1;
-  border-radius: 5px;
+  border: 2px solid #7abaf1;
+  border-radius: 10px;
   background-color: rgba(133, 133, 133, 0.5);
   transition: all 0.3s ease-out;
 }
@@ -288,14 +288,15 @@ body {
 
 .text_wrapper {
   display: flex;
-  height: 70%;
+  /* height: 70%; */
+
   width: 25%;
   background-color: #c7ecf5;
   justify-content: center;
   position: fixed;
   right: 2%;
   z-index: 1;
-  border: 5px solid #ff8000;
+  border: 2px solid #ff8000;
   border-radius: 20px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -304,9 +305,12 @@ body {
 
 .text_wrapper_content {
   width: 80%;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: justify;
   text-overflow: 0;
+  /* font-family: "Lateef", cursive; */
+  font-family: "Cormorant", serif;
+  font-weight: 600;
 }
 
 /* code page */
@@ -342,8 +346,8 @@ body {
   background-image: url("../image/me.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 250px;
-  height: 250px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   border: 4px solid #387aff;
   flex-shrink: 0;
@@ -518,7 +522,6 @@ body {
 }
 
 .intro {
-  height: 50%;
   text-align: center;
   font-family: "Lateef", cursive;
   font-weight: 800;
@@ -534,18 +537,20 @@ body {
 .about {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .about_paragraph {
   /* font-family: "Lateef", cursive; */
   font-family: "Cormorant", serif;
   font-size: 1.25rem;
-  margin: 3rem auto;
+  margin: 0.2rem auto;
   color: #13557a;
   font-weight: 600;
+  text-align: justify;
 }
 .about_photo2 {
-  margin: 2rem auto;
+  margin: auto;
   width: 18rem;
   height: 18rem;
 }
@@ -578,6 +583,7 @@ body {
 .design_skill {
   margin: 2rem auto;
   width: 100%;
+  display: flex;
 }
 
 .skill-header1 {
@@ -613,6 +619,8 @@ hr.hr_edit {
 
 .skill_paragraph-edit {
   text-align: justify;
+  font-family: "Cormorant", serif;
+  font-weight: 700;
 }
 
 /* Contact Me Page */
@@ -728,7 +736,7 @@ hr.hr_edit {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 110vh;
+  /* height: 130vh; */
   width: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -1067,9 +1075,9 @@ fieldset {
     width: 90%;
     margin-bottom: 1rem;
   }
-  .contact_page_wrap {
+  /* .contact_page_wrap {
     height: 110vh;
-  }
+  } */
   .social-button {
     width: 50px;
     height: 50px;
@@ -1087,6 +1095,47 @@ fieldset {
     margin-bottom: 5rem;
   }
 }
+
+/* about page media */
+
+@media (max-width: 950px) {
+  .skill_paragraph-edit {
+    margin-bottom: 2rem;
+  }
+  .photos {
+    width: 12rem;
+    height: 12rem;
+  }
+  .design_skill,
+  .code_skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 770px) {
+  .intro {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 615px) {
+  .intro {
+    font-size: 0.88rem;
+  }
+  .about_info {
+    padding: 2rem 0;
+  }
+}
+
+/* @media (max-width: 1060px) {
+  .about_skill_info {
+    width: 70%;
+  }
+  .about_paragraph {
+    width: 85%;
+  }
+} */
+
 /* main page media */
 
 @media (max-width: 50rem) {
