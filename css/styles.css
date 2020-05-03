@@ -529,15 +529,15 @@ body {
   font-size: 1.5rem;
 }
 
-.about_info,
-.about {
-  width: 80%;
+.about_info {
+  width: 95%;
 }
 
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
 }
 
 .about_paragraph {
@@ -1120,7 +1120,7 @@ fieldset {
 }
 @media (max-width: 615px) {
   .intro {
-    font-size: 0.88rem;
+    font-size: 0.83rem;
   }
   .about_info {
     padding: 2rem 0;
